@@ -1,0 +1,27 @@
+@PORT = 3000
+
+@HOST = http://localhost:{{PORT}}
+
+GET {{HOST}}/api/posts/5
+###
+POST {{HOST}}/api/posts
+Content-Type: application/json
+
+{
+    "titulo": "Mejores restaurantes 2",
+    "descripcion": "Un estudio realizado por el instituto El Bueno Come demuestra que los mejores restaurantes para comer se encuentran en Madrid.",  
+    "fecha_creacion": "2024-06-30",
+    "categoria": "Restaurantes",
+    "autores_id": "2"
+}
+###
+GET {{HOST}}/api/autor
+###
+POST {{HOST}}/api/autor
+Content-Type: application/json
+
+{
+    "nombre": "Lucia",
+    "email": "lucia@gmail.com",
+    "foto": "null"
+}
